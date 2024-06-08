@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+
+import Box from "@mui/material/Box";
+import NavBar from "./components/nav-bar/navBar";
+
+import "./App.css";
+import Intro from "./sections/intro";
 
 function App() {
+  const sections = ["About", "Projects", "Contact"];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Box
+      sx={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        height: "100%",
+        backgroundColor: "grey.50",
+      }}
+    >
+      <Box sx={{}} id="main-container">
+        <NavBar sections={sections} />
+        <Box sx={{ marginTop: "70px" }}></Box>
+        <Intro />
+        <main>
+          <h1>Main Content</h1>
+          <p>This is the main content area.</p>
+        </main>
+      </Box>
+    </Box>
   );
 }
 
