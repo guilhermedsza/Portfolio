@@ -8,6 +8,7 @@ import "./App.css";
 import Intro from "./sections/intro";
 import Experience from "./sections/experience";
 import Projects from "./sections/projects";
+import Footer from "./sections/footer";
 // import Contact from "./sections/contact";
 
 function App() {
@@ -36,15 +37,18 @@ function App() {
         backgroundColor: "grey.50",
       }}
     >
-      <Box id="main-container" sx={{ paddingLeft: 10, paddingRight: 10 }}>
-        <NavBar sections={sections} />
-        <Box sx={{ marginTop: "70px" }}></Box>
-        <Stack spacing={4}>
-          <Intro id="about" />
-          <Projects id="projects" />
-          <Experience id="experience" />
-          {/* <Contact id="contact" /> */}
-        </Stack>
+      <Box id="main-container">
+        <Box sx={{ paddingLeft: 10, paddingRight: 10 }}>
+          <NavBar sections={sections} />
+          <Box sx={{ marginTop: "70px" }}></Box>
+          <Stack spacing={4}>
+            <Intro id="about" />
+            <Projects id="projects" />
+            <Experience id="experience" />
+            {/* <Contact id="contact" /> */}
+          </Stack>
+        </Box>
+        <Footer />
       </Box>
     </Box>
   );
