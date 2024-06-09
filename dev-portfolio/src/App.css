@@ -4,7 +4,8 @@
     width: 100%;
     min-height: 100vh;
     background-color: white; 
-    border: 1px solid rgb(244, 244, 245);
+    border-left: 1px solid rgb(244, 244, 245);
+    border-right: 1px solid rgb(244, 244, 245);
 }
 
 @media (max-width: 1270px){
@@ -19,6 +20,15 @@
         padding-left: 10%;
         padding-right: 10%;
     }
+    
+    #footer {
+        position: absolute;
+        left: 0;
+        right: 0;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
 }
 
 p {

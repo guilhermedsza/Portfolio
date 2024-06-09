@@ -32,33 +32,34 @@ const icons = [
 
 function Intro({ ...passThroughProps }) {
   return (
-    <Grid container spacing={4} {...passThroughProps}>
+    <Grid container {...passThroughProps}>
       <Grid item xs={12}>
         <Grid container spacing={4}>
           <Grid item xs={12} md={8}>
             <Stack spacing={4}>
               <Typography variant="h3" fontWeight="bold">
-                Full-stack web and mobile app developer, and amateur astronaut.
+                Full-stack web and mobile app developer.
               </Typography>
               <Typography>
-                Experienced Software Engineer with a strong background in full
-                stack development, specializing in ReactJS and PHP. With 6 years
-                of hands-on experience, I have a proven track record of
-                delivering high-quality, user-friendly web applications. My
-                expertise lies in building responsive and interactive user
-                interfaces, optimizing application performance, and
-                collaborating effectively with cross-functional teams. I am
-                passionate about staying updated with the latest technologies
-                and trends in web development, ensuring the delivery of modern
-                and innovative solutions.
+                Hi, I'm <strong>Guilherme</strong> and I'm an experienced
+                Software Engineer with a strong background in full stack
+                development, specializing in ReactJS and PHP. With 6 years of
+                hands-on experience, I have a proven track record of delivering
+                high-quality, user-friendly web applications. My expertise lies
+                in building responsive and interactive user interfaces,
+                optimizing application performance, and collaborating
+                effectively with cross-functional teams. I am passionate about
+                staying updated with the latest technologies and trends in web
+                development, ensuring the delivery of modern and innovative
+                solutions.
               </Typography>
             </Stack>
           </Grid>
           <Grid item xs={12} md={4} sx={{ overflow: "hidden" }}>
-            <img
+            {/* <img
               src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQgByBT5IiAT_a2x9pUVb4VMoOrlzHH7Jrzj-HB5jzHlR4lNLMS"
               alt="dog"
-            />
+            /> */}
           </Grid>
         </Grid>
       </Grid>

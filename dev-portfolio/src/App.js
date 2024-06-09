@@ -21,7 +21,7 @@ function App() {
     { title: "About", onClick: () => scrollToSection("about") },
     { title: "Projects", onClick: () => scrollToSection("projects") },
     {
-      title: "Work Experience",
+      title: "Experience",
       onClick: () => scrollToSection("experience"),
     },
     // { title: "Contact", onClick: () => scrollToSection("contact") },
@@ -38,7 +38,14 @@ function App() {
       }}
     >
       <Box id="main-container">
-        <Box sx={{ paddingLeft: 10, paddingRight: 10 }}>
+        <Box
+          sx={(theme) => ({
+            [theme.breakpoints.up("md")]: {
+              paddingLeft: 10,
+              paddingRight: 10,
+            },
+          })}
+        >
           <NavBar sections={sections} />
           <Box sx={{ marginTop: "70px" }}></Box>
           <Stack spacing={4}>
@@ -48,7 +55,7 @@ function App() {
             {/* <Contact id="contact" /> */}
           </Stack>
         </Box>
-        <Footer />
+        <Footer id="footer" sections={sections} />
       </Box>
     </Box>
   );
