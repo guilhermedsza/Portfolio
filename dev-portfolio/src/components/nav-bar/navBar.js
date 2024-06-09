@@ -3,6 +3,9 @@ import Stack from "@mui/material/Stack";
 import GradientHoverTypography from "../gradientHoverTypography";
 
 function NavBar({ sections }) {
+  const handleClick = (onClick) => {
+    if (onClick) onClick();
+  };
   return (
     <Stack
       direction="row"
@@ -17,15 +20,17 @@ function NavBar({ sections }) {
         border: "1px solid rgb(244, 244, 245)",
         padding: "10px 20px",
         boxShadow: "0 2px 10px rgba(0, 0, 0, .1)",
+        backgroundColor: "white",
       }}
     >
       {sections &&
         sections.map((section, index) => (
           <GradientHoverTypography
-            key={`${section}-${index}`}
+            key={`${section.title}-${index}`}
             sx={{ cursor: "pointer", fontWeight: "bold" }}
+            onClick={() => handleClick(section.onClick)}
           >
-            {section}
+            {section.title}
           </GradientHoverTypography>
         ))}
     </Stack>

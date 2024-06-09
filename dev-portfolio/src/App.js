@@ -1,13 +1,30 @@
 import React from "react";
 
 import Box from "@mui/material/Box";
+import Stack from "@mui/material/Stack";
 import NavBar from "./components/nav-bar/navBar";
 
 import "./App.css";
 import Intro from "./sections/intro";
+import Experience from "./sections/experience";
+import Projects from "./sections/projects";
+// import Contact from "./sections/contact";
 
 function App() {
-  const sections = ["About", "Projects", "Contact"];
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) section.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const sections = [
+    { title: "About", onClick: () => scrollToSection("about") },
+    { title: "Projects", onClick: () => scrollToSection("projects") },
+    {
+      title: "Work Experience",
+      onClick: () => scrollToSection("experience"),
+    },
+    // { title: "Contact", onClick: () => scrollToSection("contact") },
+  ];
 
   return (
     <Box
@@ -19,14 +36,15 @@ function App() {
         backgroundColor: "grey.50",
       }}
     >
-      <Box sx={{}} id="main-container">
+      <Box id="main-container" sx={{ paddingLeft: 10, paddingRight: 10 }}>
         <NavBar sections={sections} />
         <Box sx={{ marginTop: "70px" }}></Box>
-        <Intro />
-        <main>
-          <h1>Main Content</h1>
-          <p>This is the main content area.</p>
-        </main>
+        <Stack spacing={4}>
+          <Intro id="about" />
+          <Projects id="projects" />
+          <Experience id="experience" />
+          {/* <Contact id="contact" /> */}
+        </Stack>
       </Box>
     </Box>
   );

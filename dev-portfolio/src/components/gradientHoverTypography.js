@@ -7,7 +7,7 @@ const GradientHoverTypography = styled(Typography)(({ theme }) => {
   return {
     transition: "color 0.5s ease",
     "&:hover": {
-      color: "#2F3C7E",
+      color: "lightblue",
     },
   };
 });
