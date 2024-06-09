@@ -16,7 +16,6 @@ const projects = [
     title: "Web Scraping and Automated Form-Filling Script",
     description:
       "I developed a sophisticated Python script designed for web scraping and automated form filling. The script navigates through various web pages based on predefined criteria, extracting relevant data and automatically populating online forms. It uses information stored in an Excel sheet to fill in the forms accurately. If the required information is not found in the sheet, the script prompts for user input to ensure complete and precise form submission. Additionally, the script is capable of handling Captchas, ensuring uninterrupted automation.",
-    src: "https://github.com/guilhermedsza/web-scraper-and-form-filler",
     logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/python/python.png",
   },
   {
