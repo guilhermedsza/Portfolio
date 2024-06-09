@@ -40,16 +40,14 @@ function TextTruncate({ children, customMaxHeight }) {
       >
         {`${text}`}
       </Typography>
-      {textRef.current && (
-        <GradientHoverTypography
-          onClick={toggleExpansion}
-          variant="body2"
-          color="primary"
-          sx={{ cursor: "pointer" }}
-        >
-          {isExpanded ? "Show less" : "... Show more"}
-        </GradientHoverTypography>
-      )}
+      <GradientHoverTypography
+        onClick={toggleExpansion}
+        variant="body2"
+        color="primary"
+        sx={{ cursor: "pointer" }}
+      >
+        {isExpanded ? "Show less" : "... Show more"}
+      </GradientHoverTypography>
     </>
   );
 }
